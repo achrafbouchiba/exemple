@@ -1,0 +1,11 @@
+version: '2'
+services:
+  bazarshop-postgresql:
+    image: postgres:12.1
+    # volumes:
+    #     - ~/volumes/jhipster/bazarshop/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=bazarshop
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432

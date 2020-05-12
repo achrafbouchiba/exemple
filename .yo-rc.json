@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.fininfo.bazarshop"
+    },
+    "jhipsterVersion": "6.8.0",
+    "applicationType": "monolith",
+    "baseName": "bazarshop",
+    "packageName": "com.fininfo.bazarshop",
+    "packageFolder": "com/fininfo/bazarshop",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ODdlOGE2NTllZmMyZGM5MDc0MWJkYzYzZTViYWQxNTVmYmNiMjY5NmQxZTc5ZmE4ZWMxMjExZjY4ZDgwOGI5MGMzYmNmOWUxNTg4MjE4ZmUwOWE1NDA4NDUxNjk0OGEwNTU4NTU3ODNmZGQyMWI5YWZiYTFlNzRjYjk0ZmQzNGM=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "flatly",
+    "clientThemeVariant": "light",
+    "creationTimestamp": 1589287518324,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
