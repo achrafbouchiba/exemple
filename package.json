@@ -18,6 +18,8 @@
     "loaders.css": "0.1.2",
     "lodash": "4.17.15",
     "moment": "2.24.0",
+    "primeicons": "^3.0.0-rc.1",
+    "primereact": "^4.2.1",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-hot-loader": "4.12.18",

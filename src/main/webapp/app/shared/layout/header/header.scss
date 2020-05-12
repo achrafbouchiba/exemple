@@ -52,7 +52,8 @@ Navbar styles
     width: auto;
     display: inline-block;
     img {
-      height: 45px;
+      height: 100px;
+      overflow: auto;
     }
   }
 }

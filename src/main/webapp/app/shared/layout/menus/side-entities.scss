@@ -1,0 +1,29 @@
+.menu > ul {
+  padding-left: 0px;
+}
+.menu {
+  text-align: center;
+  display: block;
+}
+.side-nav-items-wrapper > ul {
+  width: 100%;
+  padding-left: 0px;
+}
+
+.title {
+  padding-left: 5px;
+  font-size: 1rem;
+}
+.side-nav-items-wrapper > ul > a {
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.side-nav-menu-item {
+  margin-bottom: 12px;
+  text-align: center;
+  padding: 10px;
+}
+
+.side-nav-menu-item:hover {
+  background-color: #b2bec3;
+}

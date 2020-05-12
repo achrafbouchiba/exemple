@@ -1,0 +1,52 @@
+{
+    "name": "CodePostaux",
+    "fields": [
+        {
+            "fieldName": "gouvernorat",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ville",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "localite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "codePostal",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "zone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modifieLe",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "modifiePar",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "adresse",
+            "otherEntityRelationshipName": "codePostal",
+            "relationshipName": "adresse"
+        }
+    ],
+    "changelogDate": "20200512130300",
+    "entityTableName": "code_postaux",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

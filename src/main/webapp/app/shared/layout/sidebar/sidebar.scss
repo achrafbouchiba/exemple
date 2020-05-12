@@ -1,0 +1,29 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20%;
+  background-color: #ecf0f1 !important;
+  border-right: 1px solid #d9d9d9;
+  transition: 0.5s;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* .sidebar:hover{
+  overflow-y: scroll;
+} */
+
+.menu {
+  height: 80%;
+  width: 100%;
+}
+.logo-bazar {
+  width: 60px;
+  height: 60px;
+}
+.toggle-icon {
+  font-size: 1.5rem;
+  color: white;
+  margin: 5px;
+}

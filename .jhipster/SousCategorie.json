@@ -1,0 +1,86 @@
+{
+    "name": "SousCategorie",
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "position",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "etat",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "image",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image"
+        },
+        {
+            "fieldName": "creeLe",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "creePar",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "modifieLe",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "modifiePar",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "produit",
+            "otherEntityRelationshipName": "sousCategorie",
+            "relationshipName": "produit"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "stock",
+            "otherEntityRelationshipName": "idSousCategorie",
+            "relationshipName": "stock"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "remise",
+            "otherEntityRelationshipName": "sousCategorie",
+            "relationshipName": "remise"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "categorie",
+            "otherEntityRelationshipName": "sousCategorie",
+            "relationshipName": "categorie",
+            "otherEntityField": "nom"
+        }
+    ],
+    "changelogDate": "20200512125000",
+    "entityTableName": "sous_categorie",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

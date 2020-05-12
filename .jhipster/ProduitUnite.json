@@ -1,0 +1,28 @@
+{
+    "name": "ProduitUnite",
+    "fields": [
+        {
+            "fieldName": "unite",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "produit",
+            "otherEntityRelationshipName": "unite",
+            "relationshipName": "produit"
+        }
+    ],
+    "changelogDate": "20200512125300",
+    "entityTableName": "produit_unite",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

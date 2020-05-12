@@ -12,12 +12,18 @@ import { IRootState } from 'app/shared/reducers';
 import { getSession } from 'app/shared/reducers/authentication';
 import { getProfile } from 'app/shared/reducers/application-profile';
 import Header from 'app/shared/layout/header/header';
+import Sidebar from 'app/shared/layout/sidebar/sidebar';
 import Footer from 'app/shared/layout/footer/footer';
 import { hasAnyAuthority } from 'app/shared/auth/private-route';
 import ErrorBoundary from 'app/shared/error/error-boundary';
 import { AUTHORITIES } from 'app/config/constants';
 import AppRoutes from 'app/routes';
+import 'primereact/resources/themes/nova-light/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 
+
+let containerClass;
 const baseHref = document
   .querySelector('base')
   .getAttribute('href')
@@ -30,13 +36,21 @@ export const App = (props: IAppProps) => {
     props.getSession();
     props.getProfile();
   }, []);
-
-  const paddingTop = '60px';
+  if(props.isAuthenticated){
+    containerClass="app-container";
+    document.getElementById('root').style["margin-left"] = "20%";
+  }
+  else{
+    containerClass="app-container-logout";
+    document.getElementById('root').style["margin-left"] = "0%";
+    
+  }
   return (
     <Router basename={baseHref}>
-      <div className="app-container" style={{ paddingTop }}>
+      <div className={containerClass}>
         <ToastContainer position={toast.POSITION.TOP_LEFT} className="toastify-container" toastClassName="toastify-toast" />
         <ErrorBoundary>
+          {props.isAuthenticated === true ?<Sidebar/>:null}
           <Header
             isAuthenticated={props.isAuthenticated}
             isAdmin={props.isAdmin}
@@ -45,7 +59,7 @@ export const App = (props: IAppProps) => {
             isSwaggerEnabled={props.isSwaggerEnabled}
           />
         </ErrorBoundary>
-        <div className="container-fluid view-container" id="app-view-container">
+        <div className="view-container" id="app-view-container">
           <Card className="jh-card">
             <ErrorBoundary>
               <AppRoutes />

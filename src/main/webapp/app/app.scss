@@ -1,8 +1,8 @@
 // Override Boostrap variables
-@import '~bootswatch/dist/flatly/variables';
+@import '~bootswatch/dist/simplex/variables';
 // Import Bootstrap source files from node_modules
 @import 'node_modules/bootstrap/scss/bootstrap';
-@import '~bootswatch/dist/flatly/bootswatch';
+@import '~bootswatch/dist/simplex/bootswatch';
 body {
   margin: 0;
 }
@@ -21,7 +21,9 @@ a {
     box-sizing: border-box;
   }
 }
-
+.app-root {
+  margin-left: 20%;
+}
 .app-container {
   box-sizing: border-box;
   .view-container {
@@ -29,10 +31,26 @@ a {
     height: calc(100% - 40px);
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 1rem;
-    .card {
-      padding: 1rem;
+    padding: 3%;
+
+    .view-routes {
+      height: 100%;
+      > div {
+        height: 100%;
+      }
     }
+  }
+}
+
+.app-container-logout {
+  box-sizing: border-box;
+  .view-container {
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0%;
+
     .view-routes {
       height: 100%;
       > div {
@@ -67,7 +85,10 @@ Browser Upgrade Prompt
 /* ==========================================================================
 Custom button styles
 ========================================================================== */
-
+/*med*/
+#root {
+  transition: 0.5s;
+}
 .icon-button > .btn {
   background-color: transparent;
   border-color: transparent;
